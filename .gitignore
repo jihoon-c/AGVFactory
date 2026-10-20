@@ -73,3 +73,49 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# FactoryTwinUE — local runtime and generated artifacts
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.user
+*.userprefs
+*.sln.DotSettings.user
+.DS_Store
+Thumbs.db
+
+# Unreal / Kit workspaces (never publish editor caches or third-party probes)
+/Binaries/
+/Intermediate/
+/DerivedDataCache/
+/Saved/
+/Build/
+/exts/_kit_app_template_probe/
+/exts/**/data/
+*.log
+*.dmp
+*.tmp
+*.swp
+*.bak
+*.blend1
+*.blend2
+
+# Disposable USD previews and transient captures
+/usd/_preview_swap*/
+/usd/_test_visual_*/
+/usd/_preview_visual_*/
+/Docs/UnrealCaptures/*
+!/Docs/UnrealCaptures/FactoryTwin_factoryfinal_agv2_busy.png
+
+# Local project orchestration; not required for the published project
+/AGENTS.md

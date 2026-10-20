@@ -1,0 +1,14 @@
+[package]
+version = "0.1.0"
+title = "FactoryTwin UE - Cell Viewer"
+description = "OpenUSD factory identity and deterministic scenario replay UI"
+category = "Simulation"
+authors = ["FactoryTwinUE"]
+keywords = ["OpenUSD", "factory", "Kit", "digital twin"]
+
+[dependencies]
+"omni.usd" = {}
+"omni.kit.uiapp" = {}
+
+[[python.module]]
+name = "factory.twin"

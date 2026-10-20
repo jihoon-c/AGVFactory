@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "usd_root": "usd/factory_scene.usda",
+  "equipment": [
+    {
+      "equipment_id": "M01",
+      "prim_path": "/World/Factory/Equipment/M01",
+      "kind": "machine"
+    },
+    {
+      "equipment_id": "M02",
+      "prim_path": "/World/Factory/Equipment/M02",
+      "kind": "machine"
+    },
+    {
+      "equipment_id": "QC01",
+      "prim_path": "/World/Factory/Equipment/QC01",
+      "kind": "inspection"
+    },
+    {
+      "equipment_id": "AGV01",
+      "prim_path": "/World/Factory/AGVs/AGV01",
+      "kind": "agv"
+    },
+    {
+      "equipment_id": "AGV02",
+      "prim_path": "/World/Factory/AGVs/AGV02",
+      "kind": "agv"
+    }
+  ]
+}

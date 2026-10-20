@@ -1,0 +1,15 @@
+#usda 1.0
+(
+    defaultPrim = "Model"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Model"
+{
+    def Cube "Visual"
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.55, 0.60, 0.70)]
+    }
+}

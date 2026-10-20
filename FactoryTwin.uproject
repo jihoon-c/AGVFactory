@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.8",
+	"Category": "Digital Twin",
+	"Description": "OpenUSD scene and deterministic factory event playback in Unreal Engine",
+	"Modules": [
+		{ "Name": "FactoryTwin", "Type": "Runtime", "LoadingPhase": "Default" }
+	],
+	"Plugins": [
+		{ "Name": "USDImporter", "Enabled": true },
+		{ "Name": "USDCore", "Enabled": true }
+	]
+}

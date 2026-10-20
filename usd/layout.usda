@@ -1,0 +1,128 @@
+#usda 1.0
+(
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Xform "Factory"
+    {
+        def Xform "Locations"
+        {
+            def Xform "INBOUND"
+            {
+                double3 xformOp:translate = (-6, 0, 0.5)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                def Cube "Geometry"
+                {
+                    color3f[] primvars:displayColor = [(0.7, 0.65, 0.45)]
+                    double size = 1
+                    float3 xformOp:scale = (2, 2, 1)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                }
+            }
+
+            def Xform "OUTBOUND"
+            {
+                double3 xformOp:translate = (6, 0, 0.5)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                def Cube "Geometry"
+                {
+                    color3f[] primvars:displayColor = [(0.45, 0.65, 0.7)]
+                    double size = 1
+                    float3 xformOp:scale = (2, 2, 1)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                }
+            }
+        }
+
+        def Xform "Equipment"
+        {
+            def Xform "M01"
+            {
+                custom string twin:equipmentId = "M01"
+                double3 xformOp:translate = (-2, 2, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                def Xform "Geometry" (
+                    prepend references = @prefabs/factory_machine.usda@
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (2, 2, 2)
+                    uniform token[] xformOpOrder = ["xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "M02"
+            {
+                custom string twin:equipmentId = "M02"
+                double3 xformOp:translate = (2, 2, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                def Xform "Geometry" (
+                    prepend references = @prefabs/factory_machine.usda@
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (2, 2, 2)
+                    uniform token[] xformOpOrder = ["xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "QC01"
+            {
+                custom string twin:equipmentId = "QC01"
+                double3 xformOp:translate = (4, -2, 0.75)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                def Xform "Geometry" (
+                    prepend references = @prefabs/factory_inspection.usda@
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1.5, 1.5, 1.5)
+                    uniform token[] xformOpOrder = ["xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+        }
+
+        def Xform "AGVs"
+        {
+            def Xform "AGV01"
+            {
+                custom string twin:equipmentId = "AGV01"
+                double3 xformOp:translate = (-2, -2, 0.3)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                def Xform "Geometry" (
+                    prepend references = @prefabs/factory_agv.usda@
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 0.7, 0.6)
+                    uniform token[] xformOpOrder = ["xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "AGV02"
+            {
+                custom string twin:equipmentId = "AGV02"
+                double3 xformOp:translate = (0, -2, 0.3)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                def Xform "Geometry" (
+                    prepend references = @prefabs/factory_agv.usda@
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 0.7, 0.6)
+                    uniform token[] xformOpOrder = ["xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "coordinate_system": "Z-up",
+  "meters_per_unit": 1.0,
+  "models": {
+    "M01": {"model_path": "usd/prefabs/factory_machine.usda", "scale": [2.0, 2.0, 2.0], "rotation_deg": [0.0, 0.0, 0.0]},
+    "M02": {"model_path": "usd/prefabs/factory_machine.usda", "scale": [2.0, 2.0, 2.0], "rotation_deg": [0.0, 0.0, 0.0]},
+    "QC01": {"model_path": "usd/prefabs/factory_inspection.usda", "scale": [1.5, 1.5, 1.5], "rotation_deg": [0.0, 0.0, 0.0]},
+    "AGV01": {"model_path": "usd/prefabs/factory_agv.usda", "scale": [1.0, 0.7, 0.6], "rotation_deg": [0.0, 0.0, 0.0]},
+    "AGV02": {"model_path": "usd/prefabs/factory_agv.usda", "scale": [1.0, 0.7, 0.6], "rotation_deg": [0.0, 0.0, 0.0]}
+  }
+}

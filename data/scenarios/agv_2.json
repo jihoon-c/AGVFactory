@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "scenario_id": "agv_2",
+  "duration_seconds": 3600,
+  "fixed_step_ms": 1000,
+  "agv_count": 2,
+  "arrival_interval_seconds": 12,
+  "machine_process_seconds": {"M01": 30, "M02": 40},
+  "inspection_seconds": 8,
+  "fixed_route_travel_seconds": 12,
+  "dispatch_policy": "FIFO",
+  "scripted_faults": [
+    {"time_seconds": 200, "equipment_id": "M01", "action": "Down"},
+    {"time_seconds": 260, "equipment_id": "M01", "action": "Repair"}
+  ]
+}
